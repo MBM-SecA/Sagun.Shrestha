@@ -49,7 +49,7 @@ public class MethodTeacher
 }
 public class MethodTester
 {
-     static void Main()
+     static void Main111()
     {
         MethodTeacher methodTeacher = new MethodTeacher();
         int[] numbers = {34, 5, 6, 7, 12, 34, 56, 78, 98};
