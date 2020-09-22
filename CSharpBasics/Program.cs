@@ -8,15 +8,16 @@ public class Program
         //collections.LearnDictionary();
 
 
-        Square square = new Square(12.4);
+        //Square square = new Square(12.4);
         //square.Side = 12;
-        square.Display();
+        //square.Display();
        //var SquareArea = square.GetArea();
  
-        Rectangle rect = new Rectangle(12.4 , 16.1);
-        var AreaRect =  rect.GetArea();
-        var CircRect = rect.GetCircumference();
-
+        //Rectangle rect = new Rectangle(12.4 , 16.1);
+        //var AreaRect =  rect.GetArea();
+        //var CircRect = rect.GetCircumference();
+      FileIO fileIO = new FileIO();
+      fileIO.LearnDirectories();
     
 
  
