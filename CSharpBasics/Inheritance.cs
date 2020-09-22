@@ -27,24 +27,24 @@ public abstract class Shape
 public class Rectangle : Shape , IShapeWithSides
 {
  
-    public double length {get; set;}
-    public double breadth {get; set;}
+    public double Length {get; set;}
+    public double Breadth {get; set;}
  
-    public Rectangle(double Length, double Breadth)
+    public Rectangle(double length, double breadth)
     {
         Length = length;
         Breadth = breadth;
  
     }
-    public override double GetArea() => length * breadth;
-    public override double GetCircumference() => 2*(length + breadth );
+    public override double GetArea() => Length * Breadth;
+    public override double GetCircumference() => 2*(Length + Breadth );
     public override void Display()
     {
-        Console.WriteLine($"displaying results for rectangle {length}*{breadth}:");
+        Console.WriteLine($"displaying results for rectangle {Length}*{Breadth}:");
         Console.WriteLine($"Area: {this.GetArea()}");
-        Console.WriteLine($"Diagonal : {this.GetDiagonal()}");
+        Console.WriteLine($"Circumference : {this.GetCircumference()}");
     }
-    public double GetDiagonal() =>Math.Sqrt(length*length + breadth*breadth);
+    public double GetDiagonal() =>Math.Sqrt(Length*Length + Breadth*Breadth);
  
     
  
