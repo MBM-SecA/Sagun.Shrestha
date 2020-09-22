@@ -22,8 +22,8 @@ public class FileIO
         FileInfo fileInfo = new FileInfo(fileName);
         var size = fileInfo.Length;
         var createdDate = fileInfo.CreationTime;
-        Console.WriteLine("File Size: {size} bytes");
-        Console.WriteLine("Created: {createdDate}");
+        Console.WriteLine($"File Size: {size} bytes");
+        Console.WriteLine($"Created: {createdDate}");
 
     }
     public void LearnDirectories()
