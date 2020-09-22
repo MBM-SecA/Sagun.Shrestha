@@ -77,10 +77,10 @@ public class Circle : Shape
     
  
 }
- class a {}
+  class a {}
   class b : a {}
  
   class c : b , IA, IB {}
  
   interface IA {}
-   interface IB {}
+  interface IB {}
