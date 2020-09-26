@@ -13,7 +13,7 @@ public class FileIO
             File.WriteAllText($"../ABC/Folder{i + 1}/Hello.cs", fileHello);
         }
     }
-    static void Main (string[] args)
+    static void Main99 (string[] args)
     {
         FileIO fileIO = new FileIO();
         fileIO.LearnDirectories();
