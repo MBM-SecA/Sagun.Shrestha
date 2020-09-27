@@ -4,7 +4,7 @@ using System;
 
 public class ComplexType
 {
-    public void LearnRestriction()
+    public void LearnLINQ()
     {
          // Program for countries
             var countries = Country.GetCountries();
@@ -42,6 +42,10 @@ public class ComplexType
             {
                 Console.WriteLine(country);
             }
+
+            //HW - Is there any south african country in your  country collecton.
+            //HW - Print first 2 largest asian countries names.
+
 
     }
 }

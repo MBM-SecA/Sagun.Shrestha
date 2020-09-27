@@ -12,7 +12,7 @@ namespace LINQ
             // LINQ - Language Integrated Query
             // LINQ to objects
 
-            int[] numbers = { 23, 44, 87, 97, 44, 84, 10, 88, 55, 79, 88, 78, 45, 49 };
+            int[] numbers = { 23, 44, 87, 97, 45, 84, 10, 88, 55, 79, 88, 78, 45, 49 };
 
             // Fetch numbers which are greater than 50 and less than 70
 
@@ -40,8 +40,32 @@ namespace LINQ
             //     Console.WriteLine(name);
             // }
 
+            //Projections
+           // var result5 = numbers.Select(x => x * x);
 
-           
+            var result5 = from num in numbers
+                         
+                          select num * num;
+            //Ordering
+            var result6 = from num in numbers
+                           orderby num 
+                           select num;
+            //Partitioning
+            var result7 = numbers.Skip(5).Take(5);
+
+            //Quantifier
+            var result8 = numbers.Any(x => x % 2 == 0); 
+            var result9 = numbers.All(x => x % 2 == 0); 
+            var result10 = numbers.Contains(34);
+
+            var result11 = Enumerable.Range(1, 1000);
+            var result12 = Enumerable.Repeat("Hello World", 10);
+
+            foreach (var num in result12)
+            {
+                Console.WriteLine(num);
+            }
+
         }
     }
 }
