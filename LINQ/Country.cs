@@ -3,14 +3,19 @@ using System.Collections.Generic;
 
 public class Country
 {
+    private string v1;
+    private string v2;
+    private int v3;
+    private DateTime dateTime;
+
     public string Name { get; set;}
     public string Continent { get; set;}
     public double Area { get; set;}
     public long Population { get; set;}
     public DateTime IndependenceDay { get; set;}
-    public string Independence { get; internal set; }
 
-    public Country( string n, string c, double a, long p, DateTime i= default)
+
+    public Country( string n, string c, double a, long p, DateTime i = default)
     {
         Name = n;
         Continent = c;
@@ -19,10 +24,18 @@ public class Country
         IndependenceDay = i;
     }
 
+    public Country(string v1, string v2, int v3, DateTime dateTime)
+    {
+        this.v1 = v1;
+        this.v2 = v2;
+        this.v3 = v3;
+        this.dateTime = dateTime;
+    }
+
     public static List<Country> GetCountries()
     {
         Country c1 = new Country( "Nepal", "Asia", 4765, 4632467);
-        Country c2 = new Country( "India", "Asia", 4765575, 55837374);
+        Country c2 = new Country( "India", "Asia", 4765575, DateTime.Parse("1934/3/3"));
         Country c3 = new Country( "Russia", "Europe", 47653.34, 8347377);
         Country c4 = new Country( "USA", "North America", 78453.45, 845747);
         Country c5 = new Country( "China", "Asia", 837483.43, 34456545);
