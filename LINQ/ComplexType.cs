@@ -12,10 +12,10 @@ public class ComplexType
             var asianCountries = from country in countries
                                  where country.Continent == "Asia"
                                  select country.Name;
-            // foreach (var country in asianCountries)
-            // {
-            //     Console.WriteLine(country);
-            // }
+            foreach (var country in asianCountries)
+            {
+                Console.WriteLine(country);
+            }
 
 
 
