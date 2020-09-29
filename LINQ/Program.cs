@@ -68,25 +68,8 @@ namespace LINQ
 
 
        
-        var countries = Country.GetCountries();
-
-         //HW: Is there any african country in your country collection
-        var southAsianCountries = countries.Any(x => x.Continent == "Africa");
-         Console.WriteLine(southAsianCountries);
-
-          //HW: Print first two largest asian countries
-          var x = from country in countries
-                  where country.Continent == "Asia"
-                  orderby country.Area descending
-                  select country;
-        var largestAsianNations = x.Take(2);
-        foreach (var num in largestAsianNations)
-        {
-                Console.WriteLine($"Country: {num.Name} ; Area: {num.Area}");
-        }
-
-
-
+        ComplexType complexType = new ComplexType();
+        complexType.LearnLINQ();
         }
     }
 }

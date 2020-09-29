@@ -43,8 +43,20 @@ public class ComplexType
                 Console.WriteLine(country);
             }
 
-            //HW - Is there any south african country in your  country collecton.
-            //HW - Print first 2 largest asian countries names.
+         //HW: Is there any african country in your country collection
+        var southAsianCountries = countries.Any(x => x.Continent == "Africa");
+        Console.WriteLine(southAsianCountries);
+
+          //HW: Print first two largest asian countries
+        var largest = countries.OrderByDescending (asianCountries => asianCountries.Area);
+        Console.WriteLine("Two largest Asian countries are:");
+
+        foreach (var country  in largest.Take(2))
+        {
+                Console.WriteLine(country.Name);
+        }
+
+
 
 
     }
