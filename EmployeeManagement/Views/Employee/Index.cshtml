@@ -7,29 +7,30 @@
 
 <table class="table">
   <thead class="thead-dark">
-    <tr>
-    
-      <th scope="col">FirstName</th>
-      <th scope="col">SurName</th>
+     <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
       <th scope="col">Address</th>
       <th scope="col">Gender</th>
       <th scope="col">Salary</th>
     </tr>
   </thead>
   <tbody>
+    @{int i = 1;}
     @foreach (var employee in Model)
     {
-        <tr scope="row" >
-            <td>
-              <a href="/employee/detail?firstName=@employee.FirstName">
-                @employee.FirstName
-              </a>
-            </td>
-            <td>@employee.SurName</td>
-            <td>@employee.Address</td>
-            <td>@employee.Gender</td>
-            <td>@employee.Salary</td>
-        </tr>
+       <tr scope="row">
+         <td>@(i++)</td>
+              <td>
+                <a href="/employee/detail?firstname=@employee.Id">
+                  @employee.FirstName
+                </a>
+              </td>
+              <td>@employee.SurName</td>
+              <td>@employee.Address</td>
+              <td>@employee.Gender</td>
+              <td>@employee.Salary</td>
+      </tr>
     }
   </tbody>
 </table>

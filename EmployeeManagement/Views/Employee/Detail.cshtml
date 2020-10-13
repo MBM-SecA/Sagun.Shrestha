@@ -1,1 +1,14 @@
-<h1>Detail for an employee</h1>
+@model Person;
+@{
+    var fn = Model.FirstName;
+    ViewData["TitlePhrase"] = fn;
+}
+
+<h1> <a  href="/employee/index">Go Back</a>Employee Detail</h1>
+<ul class="List-group">
+    <li class="List-group-item">First Name : @fn</li>
+    <li class="List-group-item">Sur Name : @Model.SurName</li>
+    <li class="List-group-item">Address : @Model.Address</li>
+    <li class="List-group-item">Salary : @Model.Salary</li>
+   
+</ul>
