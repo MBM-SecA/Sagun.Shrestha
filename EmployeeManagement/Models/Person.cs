@@ -8,9 +8,9 @@ public class Person
 
     [Required]
     [Display(Name = "First Name")]
-    public string FirstName {get; set; }
+    public string FirstName { get; set; }
 
-    [Required(ErrorMessage="We need Last Name")]
+    [Required(ErrorMessage = "We need Last Name.")]
     [Display(Name = "Last Name")]
     public string SurName { get; set; }
     public string Address { get; set; }
