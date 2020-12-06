@@ -1,0 +1,14 @@
+@model Department;
+@{
+    var fn = Model.Name;
+    ViewData["TitlePhrase"] = fn;
+}
+
+<h1> <a  href="/department/index">Go Back</a>Department Detail</h1>
+<ul class="List-group">
+    <li class="List-group-item">Name : @fn</li>
+    <li class="List-group-item">Code : @Model.Code</li>
+    <li class="List-group-item">Description : @Model.Description</li>
+    <li class="List-group-item">StartDate : @Model.StartDate</li>
+   
+</ul>
