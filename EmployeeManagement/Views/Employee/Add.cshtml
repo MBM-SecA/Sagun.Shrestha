@@ -2,11 +2,23 @@
 @{
     ViewData["Titlephrase"] = "Add Employee";
     string[] genders = {"Female", "Male", "Others"};
+    List<Department> depOptions =  ViewData["DepartmentOptions"] as List<Department>;
 }
 <h1>Add new Employee</h1>
 <hr/>
 
 <form asp-controller="Employee" asp-action="Add" method="POST">
+
+  <div class="form-group">
+    <select class="custom-select" asp-for="DepartmentId">
+      <option selected>Please select Department</option>
+      @foreach(var dep in depOptions)
+      {
+        <option value="@dep.Id">@dep.Name</option>
+      }
+      
+    </select>
+  </div>
   <div class="form-group">
     <label asp-for="FirstName"></label>
     <span class="text-danger" asp-validation-for="FirstName"></span>
@@ -16,12 +28,12 @@
    
   <div class="form-group">
     <label asp-for="SurName"></label>
-    <span class="text-danger" asp-asp-validation-for="SurName"></span>
+    <span class="text-danger" asp-validation-for="SurName"></span>
     <input type="text" class="form-control" asp-for="SurName" placeholder="Enter Last Name">
   </div>
    <div class="form-group">
     <label asp-for="Address"></label>
-   <textarea class="form-control" asp-id="Address" placeholder="Enter Address"></textarea>
+   <textarea class="form-control" asp-for="Address" placeholder="Enter Address"></textarea>
    
   </div>
    <div class="form-group">
@@ -39,7 +51,7 @@
 
    <div class="form-group">
     <label asp-for="Salary"></label>
-    <input type="number" class="form-control" asp-id="Salary" placeholder="Enter Salary">
+    <input type="number" class="form-control" asp-for="Salary" placeholder="Enter Salary">
    
   </div>
  
